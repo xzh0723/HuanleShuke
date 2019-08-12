@@ -80,7 +80,6 @@ class decrypter():
             paragraph_content = paragraph.string
             chapter_content += paragraph_content + '\n'
         await browser.close()
-        # print(chapter_content)
         return chapter_content
 
     def run(self):
