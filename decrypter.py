@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
-# @Time    : 2019/6/30 21:26
+# @Time    : 2019/8/12 20:15
 # @Author  : xuzhihai0723
 # @Email   : 18829040039@163.com
-# @File    : CiWeiMao.py
+# @File    : decrypter.py
 # @Software: PyCharm
+
+
 import requests
 import execjs
 import asyncio
@@ -11,6 +13,7 @@ import re
 import json
 from pyppeteer import launch
 from bs4 import BeautifulSoup
+
 
 class decrypter():
     def __init__(self, chapter_id):
@@ -96,6 +99,7 @@ class decrypter():
         soup = BeautifulSoup(content, 'lxml')
         chapter_content = soup.get_text()
         print(chapter_content)
+
 
 if __name__ == '__main__':
     spider = decrypter("100110997")

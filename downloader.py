@@ -10,7 +10,8 @@ import os
 from bs4 import BeautifulSoup
 from decrypter import decrypter
 
-class downloader():
+
+class Downloader:
 
     def __init__(self, nover_id):
         self.novel_id = nover_id
@@ -59,7 +60,8 @@ class downloader():
                     print(f'章节{chapter_name} 下载失败!')
                     print(e.args)
 
+
 if __name__ == '__main__':
     novel_id = input('请输入小说ID>> ')
-    spider = downloader(novel_id)
+    spider = Downloader(novel_id)
     spider.run()
